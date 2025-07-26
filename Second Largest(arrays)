@@ -1,0 +1,16 @@
+#Arrays
+##Second Largest
+class Solution {
+  public:
+    int getSecondLargest(vector<int> &arr) {
+        // code here
+    sort(arr.begin(),arr.end(),greater<int>());
+    int largest=arr[0];
+    for(int i=0; i<arr.size(); i++){
+        if(arr[i]<largest){  #if you have two same largest like (0,10,10,9,7)
+            return arr[i];
+        }
+    }
+    return -1;
+    }
+};
